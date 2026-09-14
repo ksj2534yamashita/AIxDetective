@@ -57,10 +57,8 @@ class CaseSelectScreen(QWidget):
         investigate_button.setMinimumHeight(52)
 
         investigate_button.clicked.connect(
-            lambda: QMessageBox.information(
-                self,
-                "調査準備中",
-                "この事件の詳細画面はまだ実装中です。",
+            lambda: self.main_window.show_screen(
+                self.main_window.case_detail_screen
             )
         )
 
